@@ -1,9 +1,9 @@
 version: '3'
 services:
-  keel:
+  sshuttle:
     build: .
     volumes:
-      - ./keel_key.pem:/root/.ssh/id_rsa
+      - ./sshuttle_key.pem:/root/.ssh/id_rsa
     environment:
       TARGET_USER: ec2-user
       TARGET_HOST: $TARGET_HOST
