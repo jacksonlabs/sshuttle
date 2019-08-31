@@ -18,7 +18,8 @@ ENV HOST_KEY_CHECK no
 CMD /usr/bin/ssh \
     -N \
     -T \
-    -o ServerAliveInterval=60 \
+    -o ServerAliveInterval=10 \
+    -o ServerAliveCountMax=3 \
     -o StrictHostKeyChecking=${HOST_KEY_CHECK} \
     -i ${TARGET_ID} \
     -o ExitOnForwardFailure=yes \
